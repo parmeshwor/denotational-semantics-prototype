@@ -1,0 +1,16 @@
+-- Group Member: Parmeshwor Thapa (984752) & Simash Pokharel (984701)
+
+ghci>impTests
+"------ APL:: DSem_imp"
+"-- value --"
+[IntValue 2,IntValue 3,IntValue 7]
+"-- store --"
+[[IntValue 1],[IntValue 3,IntValue 1],[IntValue 0,IntValue 6]]
+"-- Function --fx(9)=> 9+9 = 18"
+[IntValue 18]
+"-- Procedure --px(4) => sum(4,4) = 8)"
+[[IntValue 8]]
+"-- pair data structure fst, snd of [1,2]--"
+[IntValue 1,IntValue 2]
+"-- for loop -- for (i=0;i<5;i++;cmd) => for (i=0;5,1,cmd) "
+[[IntValue 0,IntValue 1,IntValue 2,IntValue 3,IntValue 4]]
