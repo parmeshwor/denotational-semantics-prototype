@@ -1,0 +1,33 @@
+ghci>impcTests
+"------ APL:: DSem_impc"
+"test1():---: expressions  [ 2, 1+2, 1+2*3 ]"
+Output (IntValue 2,Halt)
+Output (IntValue 3,Halt)
+Output (IntValue 7,Halt)
+"test2():---: declaration   {const x = 2}"
+Halt
+Output (IntValue 3,Halt)
+"test3():---: {result = input}  [1, 2]"
+Output (IntValue 1,Halt)
+Output (IntValue 2,Halt)
+"test4():---: {result = input+1}  [2, 3]"
+Output (IntValue 2,Halt)
+Output (IntValue 3,Halt)
+"test5():---: Simple Program.2  -> [1]"
+Output (IntValue 1,Halt)
+Output (IntValue 1,Halt)
+Output (IntValue 0,Output (IntValue 1,Halt))
+"test6():---: Simple Program.3  -> [3,1]"
+Output (IntValue 3,Output (IntValue 1,Halt))
+"test7():---: Simple Program.4  -> [0,6, Halt]"
+Output (IntValue 0,Output (IntValue 6,Halt))
+"test8(): function invoke  -- "
+Output (IntValue 1,Halt)
+" test9(): procedure invoke--"
+Output (IntValue 8,Halt)
+"Pair data structure Fst and Snd Pair(1,2)"
+Output (IntValue 1,Halt)
+Output (IntValue 2,Halt)
+"test11():---: ForLoop Command  -> store 5 zeros and halt"
+Output (IntValue 0,Output (IntValue 0,Output (IntValue 0,Output (IntValue 0,Output (IntValue 0,Halt)))))
+
